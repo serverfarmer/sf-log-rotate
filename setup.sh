@@ -3,7 +3,7 @@
 . /opt/farm/scripts/functions.custom
 
 
-path=/opt/sf-log-rotate/profiles/$OSVER
+path=/opt/farm/ext/log-rotate/profiles/$OSVER
 
 if [ -d /etc/logrotate.d ] && [ -d $path ]; then
 	echo "setting up logrotate configuration"
