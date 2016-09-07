@@ -6,6 +6,5 @@
 	notifempty
 	dateext
 	create 664 www-data www-data
-	su www-data www-data
 	sharedscripts
 }
