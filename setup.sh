@@ -3,11 +3,17 @@
 . /opt/farm/scripts/functions.custom
 
 
-path=/opt/farm/ext/log-rotate/profiles/$OSVER
+src=/opt/farm/ext/log-rotate/profiles/$OSVER
 
-if [ -d /etc/logrotate.d ] && [ -d $path ]; then
+if [ "$OSTYPE" = "netbsd" ]; then
+	dst=/usr/pkg/etc/logrotate.d/
+else
+	dst=/etc/logrotate.d
+fi
+
+if [ -d $dst ] && [ -d $src ]; then
 	echo "setting up logrotate configuration"
-	for f in `ls $path`; do
-		ln -sf $path/$f /etc/logrotate.d/$f
+	for f in `ls $src`; do
+		ln -sf $src/$f $dst/$f
 	done
 fi

@@ -1,0 +1,16 @@
+/var/log/authlog
+/var/log/cron
+/var/log/maillog
+/var/log/messages
+{
+	rotate 24
+	monthly
+	missingok
+	notifempty
+	compress
+	dateext
+	sharedscripts
+	postrotate
+		/etc/rc.d/syslogd restart > /dev/null
+	endscript
+}
