@@ -1,7 +1,6 @@
 /var/log/auth.log
 /var/log/cron
 /var/log/debug.log
-/var/log/devd.log
 /var/log/maillog
 /var/log/messages
 /var/log/ppp.log
