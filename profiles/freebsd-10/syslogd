@@ -1,0 +1,22 @@
+/var/log/auth.log
+/var/log/cron
+/var/log/debug.log
+/var/log/devd.log
+/var/log/maillog
+/var/log/messages
+/var/log/ppp.log
+/var/log/security
+/var/log/userlog
+/var/log/xferlog
+{
+	rotate 24
+	monthly
+	missingok
+	notifempty
+	compress
+	dateext
+	sharedscripts
+	postrotate
+		/etc/rc.d/syslogd restart > /dev/null
+	endscript
+}

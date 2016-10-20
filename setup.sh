@@ -5,8 +5,10 @@
 
 src=/opt/farm/ext/log-rotate/profiles/$OSVER
 
-if [ "$OSTYPE" = "netbsd" ]; then
-	dst=/usr/pkg/etc/logrotate.d/
+if [ "$OSTYPE" = "freebsd" ]; then
+	dst=/usr/local/etc/logrotate.d
+elif [ "$OSTYPE" = "netbsd" ]; then
+	dst=/usr/pkg/etc/logrotate.d
 else
 	dst=/etc/logrotate.d
 fi
