@@ -1,6 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 . /opt/farm/scripts/init
-. /opt/farm/scripts/functions.custom
 
 
 src=/opt/farm/ext/log-rotate/profiles/$OSVER
