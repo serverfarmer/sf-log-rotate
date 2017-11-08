@@ -1,20 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 . /opt/farm/scripts/init
+. /opt/farm/scripts/functions.install
 
 
-src=/opt/farm/ext/log-rotate/profiles/$OSVER
+base=/opt/farm/ext/log-rotate/profiles/$OSVER
 
 if [ "$OSTYPE" = "freebsd" ]; then
-	dst=/usr/local/etc/logrotate.d
+	target=/usr/local/etc/logrotate.d
 elif [ "$OSTYPE" = "netbsd" ]; then
-	dst=/usr/pkg/etc/logrotate.d
+	target=/usr/pkg/etc/logrotate.d
 else
-	dst=/etc/logrotate.d
+	target=/etc/logrotate.d
 fi
 
-if [ -d $dst ] && [ -d $src ]; then
+if [ -d $target ] && [ -d $base ]; then
 	echo "setting up logrotate configuration"
-	for f in `ls $src`; do
-		ln -sf $src/$f $dst/$f
+	for f in `ls $base`; do
+		remove_link $target/$f
+		install_copy $base/$f $target
 	done
 fi
