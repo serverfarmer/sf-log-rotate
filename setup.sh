@@ -9,6 +9,8 @@ if [ "$OSTYPE" = "freebsd" ]; then
 	target=/usr/local/etc/logrotate.d
 elif [ "$OSTYPE" = "netbsd" ]; then
 	target=/usr/pkg/etc/logrotate.d
+elif [ "$OSTYPE" = "qnap" ]; then
+	target=/opt/etc/logrotate.d
 else
 	target=/etc/logrotate.d
 fi
