@@ -1,5 +1,5 @@
 /var/log/apt/term.log {
-	rotate 24
+	rotate 60
 	monthly
 	compress
 	missingok

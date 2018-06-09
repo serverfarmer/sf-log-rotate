@@ -3,7 +3,7 @@
 /var/log/maillog
 /var/log/messages
 {
-	rotate 24
+	rotate 60
 	monthly
 	missingok
 	notifempty

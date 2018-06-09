@@ -1,6 +1,6 @@
 /var/log/dpkg.log {
 	monthly
-	rotate 24
+	rotate 60
 	compress
 	delaycompress
 	missingok
@@ -10,7 +10,7 @@
 }
 /var/log/alternatives.log {
 	monthly
-	rotate 24
+	rotate 60
 	compress
 	delaycompress
 	missingok

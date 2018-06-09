@@ -1,6 +1,6 @@
 /var/log/dpkg.log {
 	monthly
-	rotate 24
+	rotate 60
 	compress
 	missingok
 	notifempty

@@ -1,7 +1,7 @@
 /var/log/php/*.log {
 	monthly
 	missingok
-	rotate 24
+	rotate 60
 	compress
 	notifempty
 	dateext

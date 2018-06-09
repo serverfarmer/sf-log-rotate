@@ -8,7 +8,7 @@
 /var/log/userlog
 /var/log/xferlog
 {
-	rotate 24
+	rotate 60
 	monthly
 	missingok
 	notifempty
